@@ -8,18 +8,14 @@
     --text-light: #EEEEEE;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     min-height: 100vh;           /* full viewport height */
     display: flex;
     flex-direction: column;       /* stack header, main, footer vertically */
     justify-content: space-between; /* push footer to bottom */
-    background: var(--bg-dark);
+    background: #ffffff;
     color: var(--text-light);
     font-family: 'Orbitron', sans-serif;
     margin: 0;
