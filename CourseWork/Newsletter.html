@@ -1,31 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact / Newsletter — Akila</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
-<body>
-    
-    <header>
-        <h1 id="nameTitle">Akila Wijerama</h1>
-        
-        <nav>
-            <a href="Main.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Projects.html">Projects</a>
-            <a href="Newsletter.html">Contact</a>
-        </nav>
-    </header>
+<body class="site">
+  <header>
+      <h1 class="logo">Akila Wijerama</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <hr>
+        <ul>
+          <a href="Main.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="Newsletter.html">Contact</a>
+        </ul>
+      </nav>
+  </header>
 
-    <main>
+  <main class="container">
+    <section class="contact">
+      <h2>Contact & Newsletter</h2>
+      <p>Sign up for occasional updates or send a message.</p>
 
-    </main>
+      <form class="contact-form" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Subscribe or send a message</legend>
 
-    <footer>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required minlength="2">
 
-        <p id="footer">&copy; 2025 All Rights Reserved</p>
-    </footer>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="topic">I want to</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose...</option>
+            <option value="subscribe">Subscribe to newsletter</option>
+            <option value="message">Send a message</option>
+            <option value="collab">Discuss collaboration</option>
+          </select>
+
+          <label for="message">Message <span class="muted small">optional</span></label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message..."></textarea>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Send</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Akila Wijerama</p>
+    </div>
+  </footer>
 </body>
 </html>

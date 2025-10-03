@@ -1,31 +1,56 @@
-<!DOCTYPE html>
+=<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects & Blog — Akila</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
-<body>
-    
-    <header>
-        <h1 id="nameTitle">Akila Wijerama</h1>
-        
-        <nav>
-            <a href="Main.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Projects.html">Projects</a>
-            <a href="Newsletter.html">Contact</a>
-        </nav>
-    </header>
+<body class="site">
+  <header>
+      <h1 class="logo">Akila Wijerama</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <hr>
+        <ul>
+          <a href="Main.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="Newsletter.html">Contact</a>
+        </ul>
+      </nav>
+  </header>
 
-    <main>
+  <main class="container">
+    <section class="projects-intro">
+      <h2>Personal Projects & Blog</h2>
+      <p class="lead">A small selection of coursework and experiments with front-end features.</p>
+    </section>
 
-    </main>
+    <section class="blog-list">
+      <!-- Blog post 1 -->
+      <article class="post" id="post-traffic">
+        <h3 class="post-title">Traffic Data Visualizer</h3>
+        <p class="post-meta">Project • <time datetime="2025-09-15">September 15, 2025</time></p>
+        <p>A UI to analyze vehicle traffic by hour with histograms and average lines. Built with vanilla JS and Canvas.</p>
+        <p><a class="read-more" href="#">Read more</a></p>
+      </article>
 
-    <footer>
+      <!-- Blog post 2 -->
+      <article class="post" id="post-portfolio">
+        <h3 class="post-title">Portfolio Redesign</h3>
+        <p class="post-meta">Blog • <time datetime="2025-08-02">August 2, 2025</time></p>
+        <p>I redesigned my portfolio to be mobile-first, with improved accessibility and performance optimisations.</p>
+        <p><a class="read-more" href="#">Read more</a></p>
+      </article>
+    </section>
+  </main>
 
-        <p id="footer">&copy; 2025 All Rights Reserved</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Akila Wijerama</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,31 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Akila Wijerama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
-<body>
-    
-    <header>
-        <h1 id="nameTitle">Akila Wijerama</h1>
-        
-        <nav>
-            <a href="Main.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Projects.html">Projects</a>
-            <a href="Newsletter.html">Contact</a>
-        </nav>
-    </header>
+<body class="site">
+  <header>
+      <h1 class="logo">Akila Wijerama</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <hr>
+        <ul>
+          <a href="Main.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="Newsletter.html">Contact</a>
+        </ul>
+      </nav>
+  </header>
 
-    <main>
+  <main class="container">
+    <article class="about-me">
+      <h2>About Me</h2>
+      <p>I am a second-year Computer Science student at the University of Westminster studying advanced client-side development. I enjoy creating responsive UIs, learning new JS frameworks and experimenting with accessible design.</p>
 
-    </main>
+      <section class="skills">
+        <h3>Skills & Tools</h3>
+        <ul>
+          <li>HTML5 & CSS3 (Flexbox, Grid)</li>
+          <li>JavaScript / TypeScript</li>
+          <li>React / Vite</li>
+          <li>Figma for design & prototyping</li>
+        </ul>
+      </section>
 
-    <footer>
+      <section class="education">
+        <h3>Education</h3>
+        <p>University of Westminster — BSc Computer Science (ongoing)</p>
+      </section>
+    </article>
+  </main>
 
-        <p id="footer">&copy; 2025 All Rights Reserved</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Akila Wijerama</p>
+    </div>
+  </footer>
 </body>
 </html>
