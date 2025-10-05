@@ -7,8 +7,10 @@
 /* -------------------------
    Variables & base styles
    ------------------------- */
+
+   /* https://colorkit.co/palette/d1dbe4-a3b7ca-7593af-476f95-194a7a/ */
 :root{
-  --bg: linear-gradient(360deg,#000000 5%, #194a7a  80%); /* gradient */
+  --bg: linear-gradient(360deg,#194a7a 10%, #000000  80%); /* gradient */
   --card-bg: rgba(255,255,255,0.04); /* semi-transparent */
   --accent: #00d4ff;
   --muted: rgba(255,255,255,0.65);
@@ -45,12 +47,12 @@ body{
    Header & navigation
    ------------------------- */
 header{
-  background: linear-gradient(360deg, rgba(15,4,76,0.35), rgba(20,30,97,0.15));
-  border-bottom:1px solid rgba(255,255,255,0.03);
+  background: linear-gradient(360deg, #00000059,#194a7a);
+  border-bottom: 1px solid #ffffff;
   position:sticky; top:0; z-index:20;
   backdrop-filter: blur(6px);
   text-align: center;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .logo{
@@ -72,13 +74,11 @@ header{
 }
 .main-nav a:hover, .main-nav a:focus{
     transform:translateY(-2px);
-    box-shadow:0 6px 18px rgba(0,0,0,0.4)
+    box-shadow:0 6px 18px rgba(0,0,0,0.4);
+    background-color: #194a7a;
 }
-/* specificity consideration: more specific selector for active state */
-.main-nav a.active{
-    background:rgba(255,255,255,0.04);
-    box-shadow:inset 0 -2px 0 rgba(255,255,255,0.02)
-}
+
+
 
 /* -------------------------
    Hero area
@@ -124,7 +124,7 @@ header{
   width: 350px;
   height: 350px;
   border-radius: 500%;
-  object-fit:cover;
+  object-fit:fill;
 }
 
 .social img{
@@ -140,15 +140,24 @@ header{
 footer{
     padding:1rem 0;
     border-top:1px solid #ffffff;
-    margin-top:3rem;
     background-color:#476f95;
     text-align: center;
+    position: relative;
+
     
     
 }
 
 
-
+.article{
+  height: auto;
+  width: auto;
+  border-width: 5px;
+  border-color: #EEEEEE;
+  padding: 20px;
+  text-align: justify;
+  
+}
 /* -------------------------
    Accessibility helpers & selectors
    ------------------------- */
@@ -161,8 +170,8 @@ img[alt] {outline:1px solid rgba(255,255,255,0.02)}
 .main-nav ul li:nth-child(1) a{font-weight:600}
 .post:nth-child(odd){transform-origin:left center;animation:floatIn .6s ease both}
 
-/* negation pseudo-class (.not active) */
-.main-nav a:not(.active):hover{opacity:0.9;filter:brightness(1.1)}
+
+
 
 /* -------------------------
    Animations
