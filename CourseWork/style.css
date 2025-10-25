@@ -1,0 +1,302 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+               "Helvetica Neue", "Inter", sans-serif;
+  background: linear-gradient(145deg, #f5f5f7, #e9ebee);
+  color: rgba(0, 0, 0, 0.85);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1.25rem 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.85);
+  transition: all 0.3s ease;
+}
+
+header:hover {
+  box-shadow: 0 6px 150px #007aff;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #007aff; /* Apple system blue */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: #007aff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+.btn {
+ 
+  margin-top: 150px;
+  color: #007aff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid;
+  box-shadow: 10px 40px 25px rgba(0, 0, 0, 0.1); /* soft shadow */
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  background: #333333;
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------
+   Main Content
+--------------------------------------------- */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.intro {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* ---------------------------------------------
+   Forms — Minimal Apple Aesthetic
+--------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.85);
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007aff;
+}
+
+/* ---------------------------------------------
+   Blog Cards
+--------------------------------------------- */
+article {
+  background: rgba(255, 255, 255, 0.55);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: scale(1.02);
+}
+
+time {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* ---------------------------------------------
+   Footer — Flat Neutral Bar
+--------------------------------------------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c1c1e;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+}
+
+/* ---------------------------------------------
+   Floating Transparent Glass Card
+--------------------------------------------- */
+.aslide {
+  width: 250px;
+  padding: 1.5rem;
+  background: #ffffff26;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(25px) saturate(150%);
+  -webkit-backdrop-filter: blur(25px) saturate(150%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  position: fixed;
+  top: 150px;
+  left: 50px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.85);
+  transition: all 0.3s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.aslide a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 500;
+  margin: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.aslide a:hover {
+  color: #007aff;
+}
+
+.aslide i {
+  margin-right: 8px;
+  color: #007aff;
+}
+
+.aslide:hover {
+  box-shadow: 0 12px 30px rgba(0, 122, 255, 0.25);
+}
+
+/* ---------------------------------------------
+   Responsive Adjustments
+--------------------------------------------- */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    backdrop-filter: blur(15px);
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .aslide {
+    position: static;
+    width: 85%;
+    margin: 1rem auto;
+    top: auto;
+    left: auto;
+    font-size: 16px;
+    padding: 1rem;
+    animation: none;
+  }
+
+  .intro {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.75rem;
+    font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .aslide {
+    width: 90%;
+    font-size: 15px;
+    padding: 0.8rem;
+  }
+}
+
+.about img{
+  width: 50px;
+  height:50px;
+}
+
+.about div{
+  display: flex;
+  align-items: center;
+  gap:16px
+}
+
+
+
+.about hr {
+  margin: 20px;
+}
+
