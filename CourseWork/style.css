@@ -1,4 +1,5 @@
-
+/* Specify font(s) to be used throughout the site and in more specific 
+areas, */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 * {
@@ -12,27 +13,26 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
                "Helvetica Neue", "Inter", sans-serif;
-  background: linear-gradient(145deg, #f5f5f7, #e9ebee);
-  color: rgba(0, 0, 0, 0.85);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(145deg, #f5f5f5, #e9ebee);
+  /* (including at least one semi-transparent),   */
+  color: rgba(0, 0, 0, 0.85); 
   line-height: 1.6;
 }
 
-
+/* Header */
 header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 1.25rem 2rem;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-  color: rgba(0, 0, 0, 0.85);
-  transition: all 0.3s ease;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding: 1.25rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.25);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      /* Shadows */
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08); 
+      color: rgba(0, 0, 0, 0.85);
+      transition: all 0.3s ease;
+      z-index: 1000;
 }
 
 header:hover {
@@ -60,7 +60,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #007aff; /* Apple system blue */
+  color: #007aff; 
 }
 
 nav a::after {
@@ -71,36 +71,31 @@ nav a::after {
   left: 0;
   bottom: -3px;
   background: #007aff;
-  transition: width 0.3s ease;
+  transition: width 0.6s ease;
 }
 
 nav a:hover::after {
   width: 100%;
 }
 
-
-.btn {
- 
+/* Common buttons style */
+button{
   margin-top: 150px;
   color: #007aff;
   padding: 0.8rem 1.6rem;
   border-radius: 50px;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-block;
   border: 2px solid;
-  box-shadow: 10px 40px 25px rgba(0, 0, 0, 0.1); /* soft shadow */
+  box-shadow: 10px 40px 25px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s;
+
 }
 
-.btn:hover {
-  background: #333333;
-  transform: scale(1.1);
+button:hover{
+   background: #333333;
+   transform: scale(1.1);
 }
 
-/* ---------------------------------------------
-   Main Content
---------------------------------------------- */
+/* Home page */
 main {
   max-width: 900px;
   margin: 2rem auto;
@@ -112,90 +107,14 @@ main {
   padding: 3rem 1rem;
 }
 
-/* ---------------------------------------------
-   Forms — Minimal Apple Aesthetic
---------------------------------------------- */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.4);
-  padding: 2rem;
-  border-radius: 20px;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.85);
-  transition: border-color 0.3s ease;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #007aff;
-}
-
-/* ---------------------------------------------
-   Blog Cards
---------------------------------------------- */
-article {
-  background: rgba(255, 255, 255, 0.55);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(20px);
-  transition: transform 0.3s ease;
-}
-
-article:hover {
-  transform: scale(1.02);
-}
-
-time {
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-/* ---------------------------------------------
-   Footer — Flat Neutral Bar
---------------------------------------------- */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1c1c1e;
-  color: rgba(255, 255, 255, 0.85);
-  text-align: center;
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
-  z-index: 999;
-}
-
-/* ---------------------------------------------
-   Floating Transparent Glass Card
---------------------------------------------- */
-.aslide {
+aside {
   width: 250px;
   padding: 1.5rem;
-  background: #ffffff26;
+  background: #ffff;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   backdrop-filter: blur(25px) saturate(150%);
-  -webkit-backdrop-filter: blur(25px) saturate(150%);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  font-family: 'Inter', sans-serif;
   text-align: center;
   position: fixed;
   top: 150px;
@@ -203,10 +122,11 @@ footer {
   z-index: 999;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  /* Text effect */
+  font-size: 22px;
   color: rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
-  animation: float 6s ease-in-out infinite;
+  animation: float 1s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -214,7 +134,16 @@ footer {
   50% { transform: translateY(-8px); }
 }
 
-.aslide a {
+/* 
+attribute selectors
+[class*=button]
+[href^="https"]
+ [type="text" */
+[type="email"]{
+  color: #007aff;
+  
+}
+a[target] {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.75);
   font-weight: 500;
@@ -222,22 +151,22 @@ footer {
   transition: color 0.3s ease;
 }
 
-.aslide a:hover {
+a[target]:hover {
   color: #007aff;
 }
 
-.aslide i {
+aside i {
   margin-right: 8px;
   color: #007aff;
 }
 
-.aslide:hover {
+aside:hover {
   box-shadow: 0 12px 30px rgba(0, 122, 255, 0.25);
 }
 
-/* ---------------------------------------------
-   Responsive Adjustments
---------------------------------------------- */
+
+
+
 @media (max-width: 768px) {
   header {
     padding: 1rem;
@@ -249,15 +178,14 @@ footer {
     gap: 1rem;
   }
 
-  .aslide {
+  aside {
     position: static;
-    width: 85%;
     margin: 1rem auto;
     top: auto;
     left: auto;
     font-size: 16px;
-    padding: 1rem;
-    animation: none;
+    
+   
   }
 
   .intro {
@@ -283,6 +211,21 @@ footer {
   }
 }
 
+/* Blog Page and Projects Page */
+article {
+  background: #ffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: scale(1.02);
+}
+
 .about img{
   width: 50px;
   height:50px;
@@ -299,4 +242,68 @@ footer {
 .about hr {
   margin: 20px;
 }
+
+#blog_title{
+  padding-bottom: 40px;
+}
+
+/* Pseudo Elements
+class/id ::after
+class/id::before
+class/id::first-letter
+class/id::first-line */
+#blog_title::after{
+  content: "Machines learn. Humans create. The magic happens where both meet.";
+  color:#007aff;
+  font-style: italic;
+}
+
+
+time {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Contact Page */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.05);
+}
+form h2{
+  color:#007aff
+}
+input, textarea {
+  padding: 0.8rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.85);
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007aff;
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #1c1c1e;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+}
+
+
 
