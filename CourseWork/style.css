@@ -35,6 +35,12 @@ header {
       z-index: 1000;
 }
 
+/*User action pseudo class
+:active
+:focus
+:disabled
+:checked */
+
 header:hover {
   box-shadow: 0 6px 150px #007aff;
 }
@@ -212,6 +218,9 @@ aside:hover {
 }
 
 /* Blog Page and Projects Page */
+
+
+
 article {
   background: #ffff;
   padding: 1.5rem;
@@ -252,6 +261,7 @@ class/id ::after
 class/id::before
 class/id::first-letter
 class/id::first-line */
+
 #blog_title::after{
   content: "Machines learn. Humans create. The magic happens where both meet.";
   color:#007aff;
