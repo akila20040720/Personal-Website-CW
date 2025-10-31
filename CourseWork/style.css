@@ -15,7 +15,7 @@ body {
                "Helvetica Neue", "Inter", sans-serif;
   background: linear-gradient(145deg, #f5f5f5, #e9ebee);
   /* (including at least one semi-transparent),   */
-  color: rgba(0, 0, 0, 0.85); 
+  color: #000000d9; 
   line-height: 1.6;
 }
 
@@ -30,7 +30,7 @@ header {
       border-bottom: 1px solid rgba(255, 255, 255, 0.35);
       /* Shadows */
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08); 
-      color: rgba(0, 0, 0, 0.85);
+      color: #000000d9;
       transition: all 0.3s ease;
       z-index: 1000;
 }
@@ -56,6 +56,7 @@ nav ul {
 }
 
 nav a {
+  margin-top: 5px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.75);
   font-weight: 500;
@@ -64,41 +65,55 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-  color: #007aff; 
+/* Negation pseudo class  */
+nav a:not(.active){
+  display: inline-block;
+  padding: 1px 25px;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(90deg, #6ee7b7, #60a5fa, #c084fc, #6ee7b7);
+  background-size: 300% 300%;
+  animation: siriColor 5s ease infinite;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -3px;
-  background: #007aff;
-  transition: width 0.6s ease;
-}
 
-nav a:hover::after {
-  width: 100%;
+
+@keyframes siriColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Common buttons style */
-button{
-  margin-top: 150px;
+.btn{
+  text-decoration: none;
   color: #007aff;
   padding: 0.8rem 1.6rem;
   border-radius: 50px;
   border: 2px solid;
   box-shadow: 10px 40px 25px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s;
-
 }
 
-button:hover{
-   background: #333333;
+.intro a{
+  display: inline-block;
+  margin-top: 150px;
+}
+
+.btn:hover{
+   background: linear-gradient(90deg, #6ee7b7, #60a5fa, #c084fc, #6ee7b7);
+   animation: siriColor 2s ease infinite;
    transform: scale(1.1);
+   background-size: 300% 300%;
+   color: #fff;
 }
 
 /* Home page */
@@ -113,13 +128,13 @@ main {
   padding: 3rem 1rem;
 }
 
+
 aside {
   width: 250px;
   padding: 1.5rem;
   background: #ffff;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  backdrop-filter: blur(25px) saturate(150%);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: fixed;
@@ -133,6 +148,7 @@ aside {
   color: rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
   animation: float 1s ease-in-out infinite;
+ 
 }
 
 @keyframes float {
@@ -219,7 +235,19 @@ aside:hover {
 
 /* Blog Page and Projects Page */
 
-
+/*Structural selectors
+:first-child
+:first-of-type
+:only-child
+:last-of-type */
+.heading p:first-of-type{
+  color: #007aff;
+  padding-bottom: 20px;
+}
+/* Relational selector  */ 
+#blog_title h2+p{
+  color: #333;
+}
 
 article {
   background: #ffff;
@@ -250,6 +278,10 @@ article:hover {
 
 .about hr {
   margin: 20px;
+}
+/* Nth pseudo class  */
+.about article:nth-child(3){
+  background: linear-gradient(to bottom right, #FAFAFA, #DCDCDC);
 }
 
 #blog_title{
@@ -297,12 +329,10 @@ input, textarea {
   transition: border-color 0.3s ease;
 }
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #007aff;
+/* Validity pseudo class  */
+input:valid {
+  border: 2px solid green;
 }
-
 
 
 footer {
