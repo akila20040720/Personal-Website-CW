@@ -160,7 +160,8 @@ aside {
 attribute selectors
 [class*=button]
 [href^="https"]
- [type="text" */
+ [type="text" ]
+ a[target]*/
 [type="email"]{
   color: #007aff;
   
@@ -226,7 +227,7 @@ aside:hover {
     gap: 0.75rem;
   }
 
-  .aslide {
+  .aside {
     width: 90%;
     font-size: 15px;
     padding: 0.8rem;
