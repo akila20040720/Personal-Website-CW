@@ -13,7 +13,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
                "Helvetica Neue", "Inter", sans-serif;
-  background: linear-gradient(145deg, #f5f5f5, #e9ebee);
+  background: radial-gradient(circle, #f5f5f5, #e9ebee);
   /* (including at least one semi-transparent),   */
   color: #000000d9; 
   line-height: 1.6;
@@ -54,7 +54,6 @@ nav ul {
   padding: 0;
   margin: 0;
 }
-
 nav a {
   margin-top: 5px;
   text-decoration: none;
@@ -64,7 +63,6 @@ nav a {
   position: relative;
   transition: color 0.3s ease;
 }
-
 /* Negation pseudo class  */
 nav a:not(.active){
   display: inline-block;
@@ -77,7 +75,9 @@ nav a:not(.active){
   background-size: 300% 300%;
   animation: siriColor 5s ease infinite;
 }
-
+nav a:hover{
+ color: #007aff;
+}
 
 
 @keyframes siriColor {
@@ -100,7 +100,7 @@ nav a:not(.active){
   border-radius: 50px;
   border: 2px solid;
   box-shadow: 10px 40px 25px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s;
+
 }
 
 .intro a{
@@ -109,7 +109,7 @@ nav a:not(.active){
 }
 
 .btn:hover{
-   background: linear-gradient(90deg, #6ee7b7, #60a5fa, #c084fc, #6ee7b7);
+   background: conic-gradient(from 20deg, #6ee7b7, #60a5fa, #c084fc, #6ee7b7);
    animation: siriColor 2s ease infinite;
    transform: scale(1.1);
    background-size: 300% 300%;
@@ -327,7 +327,7 @@ input, textarea {
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.7);
   color: rgba(0, 0, 0, 0.85);
-  transition: border-color 0.3s ease;
+  
 }
 
 /* Validity pseudo class  */
@@ -346,5 +346,9 @@ footer {
   padding: 0.75rem 1rem;
 }
 
+/*child combinator */
+.about > article {
+  margin-bottom: 2rem;
+}
 
 
